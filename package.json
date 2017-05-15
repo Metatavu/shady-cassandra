@@ -1,0 +1,19 @@
+{
+  "name": "shady-cassandra",
+  "version": "0.0.1",
+  "description": "Cassandra plugin to shady-engine",
+  "main": "index.js",
+  "plugin": {
+    "provides": [
+      "cassandra"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Metatavu Oy",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "express-cassandra": "1.8.3"
+  }
+}
