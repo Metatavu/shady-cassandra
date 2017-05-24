@@ -1,13 +1,14 @@
 (() => {
   'use strict';
   
-  module.exports = function setup(options, imports, register) {
+  const Cassandra = require('express-cassandra');
+  
+  module.exports = (options, imports, register) => {
 
-    const Cassandra = require('express-cassandra');
     const models = Cassandra.createClient({
       clientOptions: {
         contactPoints: options.contactPoints || ['127.0.0.1'],
-        protocolOptions: { 
+        protocolOptions: {
           port: options.port || 9042
         },
         keyspace: options.keyscape,
@@ -25,11 +26,13 @@
       }
     });
     
-    models.connect(function (err) {
-      if (err) throw err;
+    models.connect((err) => {
+      if (err) {
+        throw err;
+      }
       
       register(null, {
-        'cassandra': models
+        'shady-cassandra': models
       });
    
     });
