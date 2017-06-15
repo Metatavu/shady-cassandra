@@ -1,6 +1,6 @@
 {
   "name": "shady-cassandra",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cassandra plugin to shady-engine",
   "main": "index.js",
   "plugin": {

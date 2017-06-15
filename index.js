@@ -11,7 +11,7 @@
         protocolOptions: {
           port: options.port || 9042
         },
-        keyspace: options.keyscape,
+        keyspace: options.keyspace || options.keyscape,
         queryOptions: {
           consistency: options.consistency || Cassandra.consistencies.one
         }
