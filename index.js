@@ -21,7 +21,7 @@
           class: 'SimpleStrategy',
           replication_factor: 1
         },
-        migration: 'safe',
+        migration: options.migration || 'safe',
         createKeyspace: true
       }
     });
